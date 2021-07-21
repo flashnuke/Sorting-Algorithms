@@ -1,8 +1,8 @@
 template <typename T>
-void print_array(T* array_ptr, unsigned int array_len)
+void print_array(T* arr_ptr, unsigned int arr_len)
 {
-        for (unsigned int idx = 0; idx < array_len; idx++)
+        for (unsigned int idx = 0; idx < arr_len; idx++)
         {
-                std::cout << array_ptr[idx] << std::endl;
+                std::cout << arr_ptr[idx] << std::endl;
         }
 }
