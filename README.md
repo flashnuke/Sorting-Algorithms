@@ -11,3 +11,12 @@ Sort the array by iterating over the elements, compare the current element with 
 * Time complexity - Best O(n) Average O(n<sup>2</sup>) Worst O(n<sup>2</sup>)
 * Space complexity - O(1)
 * Stability - Yes
+
+## Selection Sort
+
+Sort the array by iterating over the elements with another nested iteration, save the index of the minimum value (initialized as the current index of the outer iteration and if inside the nested iteration a smaller value is found, mark it as the new minimum index).<br>The nested `for-loop` starts from `i + 1` (where `i` is the index of the outer `for-loop`) since anything below that has been placed there previously.
+
+#### Properties
+* Time complexity - Best, Average and Worst O(n<sup>2</sup>)
+* Space complexity - O(1)
+* Stability - No
