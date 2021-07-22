@@ -61,8 +61,8 @@ void merge_sort(T* array_ptr, unsigned int array_len, unsigned int start_idx = 0
        	std::cout << div_idx + start_idx << std::endl;
 	 if (div_idx > 1)
         {
-                merge_sort<T>(array_ptr, div_idx, start_idx);
-                merge_sort<T>(array_ptr, array_len - div_idx, start_idx + div_idx);
+                merge_sort<T>(array_ptr, start_idx + div_idx, start_idx);
+                merge_sort<T>(array_ptr, start_idx + array_len - div_idx, start_idx + div_idx + 1);
         }
         else
         {
