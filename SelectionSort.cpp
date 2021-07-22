@@ -7,12 +7,12 @@ void selection_sort(T* array_ptr, unsigned int array_len)
 	T min_val_idx;
 	for (unsigned int idx = 0; idx < array_len - 1; idx++)
 	{
-		min_val_idx = idx;
+		min_val_idx = idx; // "initialize" as the first element
 		for (unsigned int i_idx = idx + 1; i_idx < array_len; i_idx++)
 		{
-			if (array_ptr[i_idx] < array_ptr[min_val_idx]) min_val_idx = i_idx;	
+			if (array_ptr[i_idx] < array_ptr[min_val_idx]) min_val_idx = i_idx; // iterate over the remaining unsorted array part, mark new minimum	
 		}
-		std::swap(array_ptr[idx], array_ptr[min_val_idx]);
+		std::swap(array_ptr[idx], array_ptr[min_val_idx]); // swap minimum with current index
 	}
 }
 
