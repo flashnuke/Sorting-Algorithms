@@ -23,7 +23,7 @@ Sort the array by iterating over the elements with another nested iteration, sav
 
 ## Insertion Sort
 
-Iterate over the array, and compare each element with the preceding element. If the preceding element is smaller, move it forward and compare again with the previous element.<br>Repeat until either the preceding element is not smaller then the current elememt, or the beginning of the array is reached and set the current value as the index of the last element that was moved forward in position.
+Iterate (`for-loop`) over the array, and compare each element with the preceding element. If the preceding element is smaller, move it forward and compare again with the previous element.<br>Repeat (inner `while-loop`) until either the preceding element is not smaller then the current elememt, or the beginning of the array is reached and set the current value as the index of the last element that was moved forward in position.
 
 #### Properties
 * Time complexity - Best O(n), Average and Worst O(n<sup>2</sup>)
