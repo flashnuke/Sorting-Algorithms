@@ -27,7 +27,7 @@ void merge(T* array_ptr, unsigned int first_idx, unsigned int second_idx, unsign
 	
 	while (i < len_first && j < len_second) // while any elements are left in both of the arrays, afterwards insert remainder
 	{
-		if (first_arr[i] > second_arr[j]) // if array two is smaller
+		if (first_arr[i] > second_arr[j]) // if array two is smaller. if equal, goes to 'else' clause
 		{
 			array_ptr[k] = second_arr[j]; // insert from array two
 			j++; // increment array two iteration
