@@ -29,3 +29,13 @@ Iterate (`for-loop`) over the array, and compare each element with the preceding
 * Time complexity - Best O(n), Average and Worst O(n<sup>2</sup>)
 * Space complexity - O(1)
 * Stability - Yes
+
+## Merge Sort
+
+A "divide and conquer" type of algorithm (where one big task is divided into many smaller tasks that are then solved and merged). Recursively split the array into 2 smaller subarrays, until at least one of the subarrays is of size 1. 
+<br> Then enter the `merge()` method, that iterates over the two sub arrays (one of them is of size 1, the other is of maximum size 2), and merges them into one sorted array. While iterating, if one of the subarrays runs out of elements (meaning all of its elements have been sorted and merged already), then the remainder of the other array is fully merged at once.
+
+#### Properties
+* Time complexity - Best, Average and Worst O(log(n))
+* Space complexity - O(n) (initializing subarrays in `merge()`)
+* Stability - Yes (if elements are equal, the element from the first array is merged first)
