@@ -31,8 +31,8 @@ int partition(T* array_ptr, unsigned int array_len, unsigned int idx_start) // r
 		{
 			if (!swap_ptr)
 			{
-			swap_ptr = array_itr; // if smaller is bigger and no swap_ptr was previously set - then set
-			last_swap_ptr = swap_ptr;	
+				swap_ptr = array_itr; // if smaller is bigger and no swap_ptr was previously set - then set
+				last_swap_ptr = swap_ptr;	
 			}
 		}
 		array_itr++;
@@ -48,28 +48,28 @@ int partition(T* array_ptr, unsigned int array_len, unsigned int idx_start) // r
 template <typename T>
 void quick_sort(T* array_ptr, unsigned int array_len, unsigned int idx_start = 0)
 {
-std::cout << "before \n";
-print_array<T>(array_ptr, array_len);
+std::cout << "@" << idx_start << std::endl;
 	if (array_len > 1)
 	{
 		int div_loc = partition<T>(array_ptr, array_len, idx_start);
 		if (div_loc > -1)
 		{
-			quick_sort<T>(array_ptr, div_loc + 1, idx_start);
-			quick_sort<T>(array_ptr, array_len - div_loc - 1, div_loc);
+			quick_sort<T>(array_ptr, div_loc, idx_start);
+			quick_sort<T>(array_ptr, array_len - div_loc - idx_start - 1, div_loc);
 		}
 		else quick_sort<T>(array_ptr, array_len - 1, idx_start);
 	}
-std::cout << "after \n";
-print_array<T>(array_ptr, array_len);
 }
 
 int main()
 {
-	int arr[] = { -1, 6, 5, 9, 10, 7, 1, 0, 3, -2 };
+	int arr[] = { -1, 6, 5, 9, 10, -2, 1, 0, 3, 7 };
 	//partition<int>(arr, 10, 0);
 	quick_sort<int>(arr, 10);
 	print_array<int>(arr, 10); 
+//	int arrr[] = {2, 1};
+//	partition<int>(arrr, 2, 0);
+//	print_array<int>(arrr, 2);	
 
 	return 0;
 }
